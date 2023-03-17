@@ -1,0 +1,270 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-display: swap;
+  src: url("../css/montserrat.ttf");
+}
+* {
+  user-select: none;
+}
+body {
+  transition: all linear 100ms;
+  -webkit-transition: all linear 100ms;
+  padding: 0px; margin: 0px;
+  margin-top: 80px;
+  scroll-behavior: smooth;
+}
+:root {
+  --header-font: 40px;
+  --message-font: 16px;
+  --body-height: 500px;
+  --background-width: 40%;
+  --body-gap: 30px;
+  --margin-left: 20%;
+  --shd: -11.31px 11.31px 17px 0px rgba(138,131,124,0.23);
+}
+
+/* this is the css for the footer element at the bottom of the page  */
+.footer {
+  height: 100px;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+}
+.footer > .u {
+  font-size: 14px;
+}
+.footer > .info {
+  display: flex;
+  font-size: 14px;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.info > .head {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Start of the main class css properties */
+.page-header {
+  z-index: 100;
+  position: fixed;
+  top: 0px; left: 0px; right: 0px; 
+  height: 80px;
+  padding: 0px 30px 0px 30px;
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  font-family: Montserrat;
+  background-color: rgb(245, 245, 245);
+}
+.page-header > .header-title {
+  font-weight: 900;
+  position: relative;
+  font-size: var(--header-font);
+}
+.page-header > .header-message {
+  font-weight: 100;
+  margin-left: 10px;
+  font-size: var(--message-font);
+}
+/* this is for the body part of the page */
+.body {
+  display: flex; 
+  position: relative;
+  height: 90vh;
+  align-items: center;
+  gap: var(--body-gap);
+}
+.body > .card {
+  transition: margin-left linear 100ms;
+  -webkit-transition: margin-left linear 100ms;
+  margin-left: var(--margin-left);
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: var(--shd,0 1px 4px rgba(0,0,0,.6));
+}
+.body::before {
+  content: '';
+  transition: width linear 100ms;
+  width: var(--background-width);
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  left: 0px; 
+  top: 0px;
+  background-color: #E6DACE;
+}
+/* the card that is inside of the body class  */
+.card > .main {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #F4ECE6;
+}
+.main > .me {
+  width: 50%;
+  border-radius: 100%;
+}
+.main > .name {
+  font-size: 30px;
+  font-family: Montserrat;
+  margin-top: 30px;
+  font-weight: 700;
+  position: relative;
+}
+.main > .name::after {
+  background-color: #5087FF;
+  height: 2px; width: 80px; 
+  content: '';
+  position: absolute;
+  border-radius: 3px;
+  top: 70px;
+  right: 52px;
+}
+.main > .description {
+  margin-top: 100px;
+  font-family: Montserrat;
+  font-weight: 100;
+  font-size: 15px;
+  word-spacing: 1px;
+  margin-top: 70px;
+}
+.card > .links {
+  height: 10%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+.link {
+  width: 30px; height: 30px;
+  -webkit-transition: -webkit-transform linear 100ms;
+  transition: transform linear 100ms;
+}
+.link:hover {
+  -webkit-transition: -webkit-transform linear 100ms;
+  -webkit-transform: translateY(-3px);
+  transition: transform linear 100ms;
+  transform: translateY(-3px);
+}
+/* this is for the info part next to the actual card  */
+.body > .card-info {
+  height: 500px; 
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  font-family: Montserrat;
+}
+.card-info > .title {
+  font-family: inherit;
+  font-size: 90px;
+  font-weight: 800;
+}
+.card-info > .description {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 300;
+}
+.card-info > .button-row {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+  margin-top: 20px;
+}
+.button-row > .button {
+  background-color: white;
+  border: 2px solid black;
+  padding: 5px 0px 5px 0px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 15px;
+  width: 140px;
+  border-radius: 20px;
+  transition: all linear 100ms !important;
+  -webkit-transition: all linear 100ms !important;
+}
+.button-row > .highlight {
+  color: white;
+  font-size: 15px;
+  border-radius: 20px;
+  padding: 5px 0px 5px 0px;
+  text-align: center;
+  width: 140px;
+  background-color: #5087FF;
+  border: none;
+  transition: all linear 100ms !important;
+  -webkit-transition: all linear 100ms !important;
+}
+.button-row > .highlight:hover {
+  border: 2px solid #5087FF;
+  background-color: white;
+  color: black;
+  transition: all linear 100ms !important;
+  cursor: pointer;
+  -webkit-transition: all linear 100ms !important;
+}
+.button-row > .button:hover {
+  background-color: #5087FF;
+  border: 2px solid #5087FF;
+  color: white;
+  transition: all linear 100ms !important;
+  -webkit-transition: all linear 100ms !important;
+  cursor: pointer;
+}
+.card-info > .paragraph {
+  font-size: 14px;
+  font-family: 300;
+  text-align: left;
+  font-family: Arial,Helvetica,sans-serif !important;
+  color: rgba(0, 0, 0, 0.85);
+  margin-top: 40px;
+}
+/* screen resize  */
+@media only screen and (max-width: 1000px){
+  :root {
+    --background-width: 30%;
+    --margin-left: 10%;
+  }
+}
+@media only screen and (max-width: 850px){
+  :root {
+    --background-width: 20%;
+    --margin-left: 5%;
+  }
+}
+@media only screen and (max-width: 800px){
+  :root {
+    --background-width: 100%;
+    --body-gap: 50px;
+  }
+  .body > .card {
+    margin-left: 0px;
+  }
+  .page-header > .header-message {
+    display: none;
+  }
+  .body {
+    padding-top: 40px;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+  }
+}
+@media only screen and (max-width: 500px){
+  .u {
+    display: none;
+  }
+}
