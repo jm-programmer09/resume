@@ -122,22 +122,18 @@ body {
   font-weight: 700;
   position: relative;
 }
-.main > .name::after {
-  background-color: #5087FF;
-  height: 2px; width: 80px; 
-  content: '';
-  position: absolute;
-  border-radius: 3px;
-  top: 70px;
-  right: 52px;
-}
 .main > .description {
-  margin-top: 100px;
   font-family: Montserrat;
   font-weight: 100;
   font-size: 15px;
   word-spacing: 1px;
-  margin-top: 70px;
+  margin-top: 30px;
+}
+.main > .split {
+  background-color: #5087FF;
+  height: 3px; width: 30%;
+  border-radius: 20px;
+  margin-top: 30px;
 }
 .card > .links {
   height: 10%;
