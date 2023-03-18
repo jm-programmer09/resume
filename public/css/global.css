@@ -23,11 +23,18 @@ body {
   --margin-left: 20%;
   --main-side: #084C61;
   --main-back: #B2C9AB;
-  /* --main-back:  #B2C9AB; */
   --main-card: #ddefd7;
   --shd: -11.31px 11.31px 17px 0px rgba(138,131,124,0.23);
 }
-
+::-webkit-scrollbar {
+  background-color: white;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-side);
+  scroll-behavior: smooth;
+  border-radius: 20px;
+}
 /* this is the css for the footer element at the bottom of the page  */
 .footer {
   height: 100px;
