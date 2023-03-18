@@ -52,7 +52,6 @@ body {
 /* this is the part that is for the resume bit */
 .resume {
   padding: 60px;
-  display: flex;
   display: none;
   flex-direction: column;
   background-color: var(--main-back);
@@ -94,6 +93,28 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
   transition: all linear 100ms;
+}
+.global-return {
+  position: fixed;
+  z-index: 50;
+  top: 90px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform linear 100ms;
+}
+.global-return > .return {
+  width: 30px; height: 30px;
+}
+.global-return:hover {
+  transition: transform linear 100ms;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 /* this is the css for the footer element at the bottom of the page  */
@@ -146,11 +167,12 @@ body {
 }
 /* this is for the body part of the page */
 .body {
-  display: flex; 
+  display: flex;
   position: relative;
   height: 90vh;
   align-items: center;
   gap: var(--body-gap);
+  z-index: 51;
 }
 .body > .card {
   transition: margin-left linear 100ms;
