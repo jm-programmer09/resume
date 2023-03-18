@@ -53,6 +53,7 @@ body {
 .resume {
   padding: 60px;
   display: flex;
+  display: none;
   flex-direction: column;
   background-color: var(--main-back);
   font-family: Montserrat;
@@ -146,7 +147,6 @@ body {
 /* this is for the body part of the page */
 .body {
   display: flex; 
-  display: none;
   position: relative;
   height: 90vh;
   align-items: center;
