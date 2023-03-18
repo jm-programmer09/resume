@@ -35,13 +35,66 @@ body {
   scroll-behavior: smooth;
   border-radius: 20px;
 }
+#frost {
+  z-index: 99;
+  position: fixed;
+  display: none;
+  top: 0px; right: 0px; left: 0px; bottom: 0px;
+  background-color: white;
+  animation: frost_animation linear 3s infinite;
+}
+@keyframes frost_animation {
+  0% {opacity: 0;}
+  50% { opacity: 1;}
+  100% { opacity: 0;}
+
+}
 /* this is the part that is for the resume bit */
 .resume {
-  height: 3000px;
+  padding: 60px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  background-color: var(--main-back);
+  font-family: Montserrat;
+  min-height: 80vh;
+  gap: 40px;
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
   align-items: center;
 }
+.resume > .resume-title {
+  font-weight: 600;
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+.resume > .resume-title::before {
+  width: 20px; height: 20px;
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 15px;
+  margin-right: 20px;
+  background-color: var(--main-side);
+  transition: border-radius linear 100ms;
+}
+.resume > .resume-title:hover::before {
+  transition: border-radius linear 100ms;
+  border-radius: 100%;
+}
+.resume > .card {
+  background-color: white;
+  box-shadow: var(--shd,0 1px 4px rgba(0,0,0,.6));
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  transition: all linear 100ms;
+}
+
 /* this is the css for the footer element at the bottom of the page  */
 .footer {
   height: 100px;
@@ -93,6 +146,7 @@ body {
 /* this is for the body part of the page */
 .body {
   display: flex; 
+  display: none;
   position: relative;
   height: 90vh;
   align-items: center;
@@ -252,11 +306,17 @@ body {
     --background-width: 30%;
     --margin-left: 10%;
   }
+  .resume > .card {
+    width: 70%;
+  }
 }
 @media only screen and (max-width: 850px){
   :root {
     --background-width: 20%;
     --margin-left: 5%;
+  }
+  .resume > .card {
+    width: 85%;
   }
 }
 @media only screen and (max-width: 800px){
@@ -276,9 +336,19 @@ body {
     flex-direction: column;
     height: fit-content;
   }
+  .resume > .card {
+    width: 100%;
+  }
+  .resume {
+    padding: 40px;
+  }
 }
 @media only screen and (max-width: 500px){
   .u {
     display: none;
+  }
+  .resume {
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
