@@ -21,6 +21,10 @@ body {
   --background-width: 40%;
   --body-gap: 30px;
   --margin-left: 20%;
+  --main-side: #084C61;
+  --main-back: #B2C9AB;
+  /* --main-back:  #B2C9AB; */
+  --main-card: #ddefd7;
   --shd: -11.31px 11.31px 17px 0px rgba(138,131,124,0.23);
 }
 
@@ -100,7 +104,7 @@ body {
   position: absolute;
   left: 0px; 
   top: 0px;
-  background-color: #E6DACE;
+  background-color: var(--main-back);
 }
 /* the card that is inside of the body class  */
 .card > .main {
@@ -109,7 +113,7 @@ body {
   padding: 20px;
   align-items: center;
   flex-grow: 1;
-  background-color: #F4ECE6;
+  background-color: var(--main-card);
 }
 .main > .me {
   width: 50%;
@@ -130,7 +134,7 @@ body {
   margin-top: 30px;
 }
 .main > .split {
-  background-color: #5087FF;
+  background-color: var(--main-side);
   height: 3px; width: 30%;
   border-radius: 20px;
   margin-top: 30px;
@@ -199,13 +203,13 @@ body {
   padding: 5px 0px 5px 0px;
   text-align: center;
   width: 140px;
-  background-color: #5087FF;
+  background-color: var(--main-side);
   border: none;
   transition: all linear 100ms !important;
   -webkit-transition: all linear 100ms !important;
 }
 .button-row > .highlight:hover {
-  border: 2px solid #5087FF;
+  border: 2px solid var(--main-side);
   background-color: white;
   color: black;
   transition: all linear 100ms !important;
@@ -213,8 +217,8 @@ body {
   -webkit-transition: all linear 100ms !important;
 }
 .button-row > .button:hover {
-  background-color: #5087FF;
-  border: 2px solid #5087FF;
+  background-color: var(--main-side);
+  border: 2px solid var(--main-side);
   color: white;
   transition: all linear 100ms !important;
   -webkit-transition: all linear 100ms !important;
