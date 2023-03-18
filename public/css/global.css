@@ -51,23 +51,105 @@ body {
 }
 /* this is the part that is for the resume bit */
 .resume {
-  padding: 60px;
+  padding: 40px;
   display: none;
   flex-direction: column;
   background-color: var(--main-back);
   font-family: Montserrat;
   min-height: 80vh;
-  gap: 40px;
+  gap: 60px;
   padding-top: 60px !important;
   padding-bottom: 60px !important;
   align-items: center;
+}
+.resume > .option {
+  flex-direction: column !important;
+  gap: 10px;
+}
+.option > .list {
+  margin-left: 30px;
+  margin-right: 30px;
+  gap: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.list::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 2px;
+  background-color: var(--main-side);
+  width: 15px; height: 15px;
+  transition: border-radius linear 100ms;
+  -webkit-transition: border-radius linear 100ms;
+}
+.list:hover::before {
+  border-radius: 100%;
+  transition: border-radius linear 100ms;
+  -webkit-transition: border-radius linear 100ms;
+}
+/* for the options of the list  */
+.list > .date {
+  font-weight: 700;
+  color: var(--main-side);
+}
+.list > .award {
+  color: black;
+  font-weight: 1000;
+}
+.list > .detail {
+  color: rgba(0,0,0,.0.6);
+  font-weight: 200;
+}
+.card > .sub {
+  font-weight: 700 !important;
+  font-size: 25px;
+  position: absolute;
+  left: 0px;
+  top: -50px;
+}
+/* this is for the extra details of the card section   */
+.left > .date {
+  color: var(--main-side);
+  font-weight: 700;
+  font-size: 28px;
+}
+.left > .position {
+  color: black;
+  font-size: 20px;
+  font-weight: 300;
+}
+.left > .detail {
+  color: rgba(0,0,0,.0.6);
+  font-size: 14px;
+  font-weight: 100;
+}
+.card > .left {
+  width: 50%;
+  gap: 7px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.card > .right {
+  margin-right: 20px;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 15px;
+  max-width: 50%;
+  height: fit-content;
+  overflow: hidden;
+  text-align: left;
+  color: rgba(0,0,0,.6);
 }
 .resume > .resume-title {
   font-weight: 600;
   font-size: 40px;
   text-align: center;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
 }
 .resume > .resume-title::before {
   width: 20px; height: 20px;
@@ -78,6 +160,7 @@ body {
   margin-right: 20px;
   background-color: var(--main-side);
   transition: border-radius linear 100ms;
+  -webkit-transition: border-radius linear 100ms;
 }
 .resume > .resume-title:hover::before {
   transition: border-radius linear 100ms;
@@ -88,11 +171,12 @@ body {
   box-shadow: var(--shd,0 1px 4px rgba(0,0,0,.6));
   width: 60%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 20px;
   transition: all linear 100ms;
+  -webkit-transition: all linear 100ms;
+  position: relative;
 }
 .global-return {
   position: fixed;
@@ -101,18 +185,21 @@ body {
   left: 10px;
   width: 40px;
   height: 40px;
+  background-color: white;
   border-radius: 100%;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: transform linear 100ms;
+  -webkit-transition: transform linear 100ms;
 }
 .global-return > .return {
   width: 30px; height: 30px;
 }
 .global-return:hover {
   transition: transform linear 100ms;
+  -webkit-transition: transform linear 100ms;
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -187,6 +274,7 @@ body {
 }
 .body::before {
   content: '';
+  -webkit-transition: width linear 100ms;
   transition: width linear 100ms;
   width: var(--background-width);
   height: 100%;
