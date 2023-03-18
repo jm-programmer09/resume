@@ -462,3 +462,23 @@ body {
     padding-left: 10px;
   }
 }
+@media only screen and (max-width: 635px){
+  .option > .list {
+    justify-content: left;
+    gap: 20px;
+  }
+  .resume > .card {
+    flex-direction: column;
+  }
+  .resume > .card {
+    align-items: start;
+  }
+  .card > .right {
+    max-width: 90%;
+    width: 90%;
+    margin: 20px;
+  }
+  .list > .detail {
+    display: none;
+  }
+}
