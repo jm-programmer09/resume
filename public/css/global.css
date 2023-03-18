@@ -35,6 +35,13 @@ body {
   scroll-behavior: smooth;
   border-radius: 20px;
 }
+/* this is the part that is for the resume bit */
+.resume {
+  height: 3000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* this is the css for the footer element at the bottom of the page  */
 .footer {
   height: 100px;
