@@ -11,6 +11,7 @@ const changeTo = (newID) => {
   const interval = setInterval(function (){
     current.style.display = "none";
     news.style.display = "flex";
+    window.scrollTo(0, 0);
     clearInterval(interval);
   }, 1000);
 
