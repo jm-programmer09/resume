@@ -3,6 +3,8 @@ const changeTo = (newID) => {
   const current = document.getElementById(currents), news = document.getElementById(newID);
   const frost = document.getElementById("frost");
 
+  document.getElementById(currents + "-t").className = "link";
+  document.getElementById(newID + '-t').className = "high link";
   currents = newID;
   
   frost.style.display = "block";

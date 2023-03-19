@@ -297,6 +297,28 @@ body {
   margin-left: 10px;
   font-size: var(--message-font);
 }
+.page-header > .header-link {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 40px !important;
+  font-weight: 300;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: right;
+  flex-grow: 1;
+}
+.header-link > .link{
+  background-color: transparent;
+  border: none;
+  font-size: 20px !important;
+}
+.header-link > .link:hover {
+  cursor: pointer;
+}
+.header-link > .high {
+  color: var(--main-side);
+}
 /* this is for the body part of the page */
 .body {
   display: flex;
@@ -524,6 +546,11 @@ a > .link:hover {
     margin: 20px;
   }
   .list > .detail {
+    display: none;
+  }
+
+  /* this is getting rid of the stuff in the header  */
+  .page-header > .header-link {
     display: none;
   }
 }
